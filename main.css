@@ -1,0 +1,12 @@
+.titel{
+    font-family: Ubuntu;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    padding-left: 40px;
+    text-shadow: 2px 2px 5px black;
+}
+
+#kijkKnop{
+    font-size: 20px;
+}

@@ -1,0 +1,82 @@
+{
+  "trips": [
+    {
+      "name": "TEST",
+      "startDate": "2026/09/01",
+      "endDate": "2026/09/05",
+      "image": "https://cdn.maxvakantieman.nl/2023/05/shutterstock_2123019209-950x550.jpg",
+      "geoFile": "https://example.com/trip.geojson",
+      "description": "Een test tripje!",
+      "people": "Lars, Karl",
+      "days": [
+        {
+          "date": "2026/09/01",
+          "title": "Begin!",
+          "images": [
+            "https://example.com/day-1-image-1.jpg",
+            "https://example.com/day-1-image-2.jpg"
+          ],
+          "description": "1ste dag van de test!",
+          "geoFile": "https://example.com/day-1.geojson",
+          "moments": [
+            {
+              "images": [
+                "https://example.com/moment-1-image-1.jpg",
+                "https://example.com/moment-1-image-2.jpg"
+              ],
+              "description": "Aangekomen in teststation!",
+              "geoFile": "https://example.com/moment-1.geojson"
+            },
+            {
+              "images": [
+                "https://example.com/moment-1-image-1.jpg",
+                "https://example.com/moment-1-image-2.jpg"
+              ],
+              "description": "Wow nog iets gebeurt op de test!",
+              "geoFile": "https://example.com/moment-1.geojson"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TEST2",
+      "startDate": "2026/09/01",
+      "endDate": "2026/09/05",
+      "image": "https://cdn.maxvakantieman.nl/2023/05/shutterstock_2123019209-950x550.jpg",
+      "geoFile": "https://example.com/trip.geojson",
+      "description": "Een test tripje!",
+      "people": "Lars, Karl",
+      "days": [
+        {
+          "date": "2026/09/01",
+          "title": "Begin!",
+          "images": [
+            "https://example.com/day-1-image-1.jpg",
+            "https://example.com/day-1-image-2.jpg"
+          ],
+          "description": "1ste dag van de test!",
+          "geoFile": "https://example.com/day-1.geojson",
+          "moments": [
+            {
+              "images": [
+                "https://example.com/moment-1-image-1.jpg",
+                "https://example.com/moment-1-image-2.jpg"
+              ],
+              "description": "Aangekomen in teststation!",
+              "geoFile": "https://example.com/moment-1.geojson"
+            },
+            {
+              "images": [
+                "https://example.com/moment-1-image-1.jpg",
+                "https://example.com/moment-1-image-2.jpg"
+              ],
+              "description": "Wow nog iets gebeurt op de test!",
+              "geoFile": "https://example.com/moment-1.geojson"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
