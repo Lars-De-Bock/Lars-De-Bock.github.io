@@ -2,21 +2,75 @@
   "trips": [
     {
       "name": "TEST",
-      "startDate": "2026/09/01",
-      "endDate": "2026/09/05",
+      "startDate": "01/06/2026",
+      "endDate": "05/06/2026",
       "image": "https://cdn.maxvakantieman.nl/2023/05/shutterstock_2123019209-950x550.jpg",
       "geoFile": "https://example.com/trip.geojson",
       "description": "Een test tripje!",
       "people": "Lars, Karl",
       "days": [
         {
-          "date": "2026/09/01",
+          "date": "01/06/2026",
           "title": "Begin!",
           "images": [
             "https://www.bahnhof.de/_next/image?url=%2Fcms%2Fimages%2F1f9af698-7d3a-4916-bda0-c81d7a9369bd&w=3840&q=75",
-            "hhttps://i.pinimg.com/originals/9b/ab/6a/9bab6aa4768d28fc847a9825834d058c.jpg"
+            "https://i.pinimg.com/originals/9b/ab/6a/9bab6aa4768d28fc847a9825834d058c.jpg"
           ],
           "description": "1ste dag van de test!",
+          "geoFile": "https://example.com/day-1.geojson",
+          "moments": [
+            {
+              "images": [
+                "https://example.com/moment-1-image-1.jpg",
+                "https://example.com/moment-1-image-2.jpg"
+              ],
+              "description": "Aangekomen in teststation!",
+              "geoFile": "https://example.com/moment-1.geojson"
+            },
+            {
+              "images": [
+                "https://example.com/moment-1-image-1.jpg",
+                "https://example.com/moment-1-image-2.jpg"
+              ],
+              "description": "Wow nog iets gebeurt op de test!",
+              "geoFile": "https://example.com/moment-1.geojson"
+            }]
+        },
+        {
+          "date": "02/06/2026",
+          "title": "Laten we gaan!",
+          "images": [
+            "https://www.bahnhof.de/_next/image?url=%2Fcms%2Fimages%2F1f9af698-7d3a-4916-bda0-c81d7a9369bd&w=3840&q=75",
+            "./afbeeldingen/a.jpg"
+          ],
+          "description": "2de dag van de test!",
+          "geoFile": "https://example.com/day-1.geojson",
+          "moments": [
+            {
+              "images": [
+                "https://example.com/moment-1-image-1.jpg",
+                "https://example.com/moment-1-image-2.jpg"
+              ],
+              "description": "Aangekomen in teststation!",
+              "geoFile": "https://example.com/moment-1.geojson"
+            },
+            {
+              "images": [
+                "https://example.com/moment-1-image-1.jpg",
+                "https://example.com/moment-1-image-2.jpg"
+              ],
+              "description": "Wow nog iets gebeurt op de test!",
+              "geoFile": "https://example.com/moment-1.geojson"
+            }]
+        },
+        {
+          "date": "03/06/2026",
+          "title": "Woooo gedaan!",
+          "images": [
+            "https://www.bahnhof.de/_next/image?url=%2Fcms%2Fimages%2F1f9af698-7d3a-4916-bda0-c81d7a9369bd&w=3840&q=75",
+            "https://i.pinimg.com/originals/9b/ab/6a/9bab6aa4768d28fc847a9825834d058c.jpg"
+          ],
+          "description": "3de dag van de test!",
           "geoFile": "https://example.com/day-1.geojson",
           "moments": [
             {
