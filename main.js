@@ -33,6 +33,11 @@ async function laadData() {
   router();
 }
 
+function openFullscreen(afbeelding){
+  document.getElementById("modalImage").src = afbeelding.src
+  bootstrap.Modal.getOrCreateInstance('#imageModal').show();
+}
+
 function laadTrips() {
   console.log("trips aan het laden");
   kaartjes.innerHTML = "";
@@ -68,16 +73,18 @@ function laadDagen(tripNummer) {
   x.trips[tripNummer].days.forEach((dag) => {
     const dagKaart = document.createElement("div");
     dagKaart.className = "card mt-2";
+    carouselAfbeeldingen = ""
+    dag.images.forEach((afbeelding, index) => {
+      carouselAfbeeldingen += `
+        <div class="carousel-item ${index === 0 ? 'active' : ''}">
+          <img src="${afbeelding}" class="d-block w-100" onclick="openFullscreen(this)" alt="Sorry! iets mis met deze foto, stuur mij!!!!">
+        </div>`//eerste moet op actief gezet worden, anders allebij hidden
+    })
 
     dagKaart.innerHTML = `
-            <div id="carouselControls${dagNummer}" class="carousel slide" data-ride="carousel" data-bs-interval="false">
+            <div id="carouselControls${dagNummer}" class="carousel slide" data-bs-interval="false">
               <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="${dag.images[0]}" class="d-block w-100" alt="Sorry! Stuur mij dat deze foto ontbreekt pls">
-                </div>
-                <div class="carousel-item">
-                  <img src="${dag.images[1]}" class="d-block w-100" alt="...">
-                </div>
+                ${carouselAfbeeldingen}
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls${dagNummer}" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
