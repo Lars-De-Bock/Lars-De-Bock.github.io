@@ -8,8 +8,8 @@ function router(){
     console.log("in router")
     if(location.search.includes("?")){
         parameters = new URLSearchParams(window.location.search);
-        console.log(parameters.pad)
-        history.replaceState({}, '', parameters.pad)
+        console.log(parameters.get("pad"))
+        history.replaceState({}, '', parameters.get("pad"))
     }
     pad = location.pathname//pad = tripNummer/dagNummer/
     indexen = pad.split("/").slice(1)
