@@ -33,9 +33,9 @@ async function laadData() {
   router();
 }
 
-function openFullscreen(afbeelding){
-  document.getElementById("modalImage").src = afbeelding.src
-  bootstrap.Modal.getOrCreateInstance('#imageModal').show();
+function openFullscreen(afbeelding) {
+  document.getElementById("modalImage").src = afbeelding.src;
+  bootstrap.Modal.getOrCreateInstance("#imageModal").show();
 }
 
 function laadTrips() {
@@ -73,13 +73,13 @@ function laadDagen(tripNummer) {
   x.trips[tripNummer].days.forEach((dag) => {
     const dagKaart = document.createElement("div");
     dagKaart.className = "card mt-2";
-    carouselAfbeeldingen = ""
+    carouselAfbeeldingen = "";
     dag.images.forEach((afbeelding, index) => {
       carouselAfbeeldingen += `
-        <div class="carousel-item ${index === 0 ? 'active' : ''}">
+        <div class="carousel-item ${index === 0 ? "active" : ""}">
           <img src="${afbeelding}" class="d-block w-100" onclick="openFullscreen(this)" alt="Sorry! iets mis met deze foto, stuur mij!!!!">
-        </div>`//eerste moet op actief gezet worden, anders allebij hidden
-    })
+        </div>`; //eerste moet op actief gezet worden, anders allebij hidden
+    });
 
     dagKaart.innerHTML = `
             <div id="carouselControls${dagNummer}" class="carousel slide" data-bs-interval="false">
@@ -96,12 +96,12 @@ function laadDagen(tripNummer) {
               </button>
           </div>
             <div class="card-body">
-                <h5 class="card-title">${dag.name}</h5>
+                <h5 class="card-title">Dag ${dagNummer + 1}</h5>
                 <p class="card-text">${dag.description}</p>
                 <hr class="border border-secondary opacity-25">
                 <div class="d-flex justify-content-between">
                     <p class="card-text mb-0">
-                        ${dag.Date}
+                        ${dag.date}
                     </p>
                     <button class="btn btn-primary" id="kijkKnop" onclick="history.pushState({}, '', '/${tripNummer}/${dagNummer}'); router()">👀</button>
                 </div>
@@ -115,4 +115,38 @@ function laadDagen(tripNummer) {
 function laadMomenten(tripNummer, dagNummer) {
   console.log("momenten laden van trip ${tripNummer} dag ${dagNummer}");
   kaartjes.innerHTML = "";
+  momentNummer = 0;
+  x.trips[tripNummer].days[dagNummer].moments.forEach((moment) => {
+    const momentkaart = document.createElement("div");
+    momentkaart.className = "card mt-2";
+    carouselAfbeeldingen = "";
+    moment.images.forEach((afbeelding, index) => {
+      carouselAfbeeldingen += `
+        <div class="carousel-item ${index === 0 ? "active" : ""}">
+          <img src="${afbeelding}" class="d-block w-100" onclick="openFullscreen(this)" alt="Sorry! iets mis met deze foto, stuur mij!!!!">
+        </div>`; //eerste moet op actief gezet worden, anders allebij hidden
+    });
+
+    momentkaart.innerHTML = `
+            <div id="carouselControls${momentNummer}" class="carousel slide" data-bs-interval="false">
+              <div class="carousel-inner">
+                ${carouselAfbeeldingen}
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls${momentNummer}" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselControls${momentNummer}" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+            <div class="card-body">
+                <p class="card-text">${moment.description}</p>
+            </div>
+    `;
+    kaartjes.append(dagKaart);
+
+    momentNummer += 1;
+  });
 }
