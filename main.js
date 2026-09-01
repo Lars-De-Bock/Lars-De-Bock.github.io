@@ -6,11 +6,11 @@ console.log("in js")
 
 function router(){
     console.log("in router")
-    pad = ""
     if(location.search.includes("?")){
         parameters = new URLSearchParams(window.location.search);
-        pad = params.get('path');
-    }else{pad = location.pathname}//pad = tripNummer/dagNummer/
+        history.replaceState({}, '', '${parameters.path}')
+    }
+    pad = location.pathname//pad = tripNummer/dagNummer/
     indexen = pad.split("/").slice(1)
     console.log(indexen)
     if(indexen[0] != "" && indexen[0] != undefined){laadDagen(indexen[0])} //Als trip geselecteerd, laad dagen van die trip. Geen trip? Laad trips en eindig functie
