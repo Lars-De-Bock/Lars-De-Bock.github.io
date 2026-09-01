@@ -145,7 +145,7 @@ function laadMomenten(tripNummer, dagNummer) {
                 <p class="card-text">${moment.description}</p>
             </div>
     `;
-    kaartjes.append(dagKaart);
+    kaartjes.append(momentkaart);
 
     momentNummer += 1;
   });
