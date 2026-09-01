@@ -52,11 +52,11 @@ function laadTrips(){
 
 
 function laadDagen(tripNummer){
-    kaartjes.innerHTML = ''
     console.log("dagen laden van trip ${tripNummer}")
+    kaartjes.innerHTML = ''
 }
 
 function laadMomenten(tripNummer, dagNummer){
-    kaartjes.innerHTML = ''
     console.log("momenten laden van trip ${tripNummer} dag ${dagNummer}")
+    kaartjes.innerHTML = ''
 }
